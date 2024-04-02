@@ -1,11 +1,15 @@
 // Import the required modules
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
+
 
 // Create an instance of Express
 const app = express();
 
 // Define a GET route
+app.use(cors());
+
 app.get('/', (req, res) => {
 
     const axios = require('axios');
@@ -13,8 +17,8 @@ app.get('/', (req, res) => {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        // url: 'https://rpc-namada-t.crouton.digital/status',
-        url: 'https://jsonplaceholder.typicode.com/todos/1',
+        url: 'https://rpc-namada-t.crouton.digital/status',
+        // url: 'https://jsonplaceholder.typicode.com/todos/1',
         headers: {}
     };
 
