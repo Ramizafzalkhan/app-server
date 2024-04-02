@@ -13,7 +13,8 @@ app.get('/', (req, res) => {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'https://rpc-namada-t.crouton.digital/status',
+        // url: 'https://rpc-namada-t.crouton.digital/status',
+        url: 'https://jsonplaceholder.typicode.com/todos/1',
         headers: {}
     };
 
